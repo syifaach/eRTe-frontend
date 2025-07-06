@@ -1,0 +1,22 @@
+/* global.css atau module.css */
+.card {
+  /* width: 350px;
+  height: 230px; */
+  background: white;
+  border-radius: 10px;
+  border-color: #cfdae7;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  height: 120px;
+}
+
+.card-image {
+  position: absolute;
+  bottom: -10px;
+  left: 90%;
+  transform: translateX(-50%);
+  height: 85px;
+}
