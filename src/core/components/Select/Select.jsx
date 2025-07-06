@@ -1,9 +1,24 @@
-import { Select } from "@mui/material";
+import { FormControl, FormLabel, MenuItem, Select } from "@mui/material";
 
-export default Select = ({ value, id, name, onChange, options, label }) => {
+const CustomSelect = ({ value, id, name, size, fullWidth, onChange, options, label }) => {
   return (
-    <Select id={id} name={name} value={value} label={label} onChange={onChange}>
-      {options}
-    </Select>
+    <FormControl fullWidth={fullWidth}>
+      <FormLabel>{label}</FormLabel>
+      <Select
+        id={id}
+        name={name}
+        size={size}
+        fullWidth={fullWidth}
+        value={value}
+        label={label}
+        onChange={onChange}
+      >
+        {options?.map((option, index) => (
+          <MenuItem key={index} value={option.value} >{option.label}</MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 };
+
+export default CustomSelect
