@@ -6,7 +6,7 @@ import Table from "../../../core/components/Table/Table";
 import { Grid2 } from "@mui/material";
 import { columnsTableWarga, dummyData } from "../constants";
 
-const ListWarga = () => {
+const ListWarga = ({ setIsAddPeoples }) => {
   const paginationModel = { page: 0, pageSize: 5 };
 
   const Content = () => {
@@ -40,8 +40,9 @@ const ListWarga = () => {
               />
               <CustomButton
                 variant={"contained"}
-                label={'Tambah Warga'}
+                label={"Tambah Warga"}
                 size="large"
+                onClick={() => setIsAddPeoples(true)}
               />
             </div>
           </Grid2>
