@@ -3,8 +3,9 @@ import CustomCard from "../../../core/components/Card/Card";
 import Input from "../../../core/components/Input/Input";
 import RadioButton from "../../../core/components/RadioButton/RadioButton";
 import CustomButton from "../../../core/components/Button/Button";
+import { Close } from "@mui/icons-material";
 
-const FormAddWarga = () => {
+const FormAddWarga = ({ setIsAddPeoples }) => {
   const genderOptions = [
     { key: "laki-laki", value: "laki-laki", label: "Laki-laki" },
     { key: "perempuan", value: "perempuan", label: "Perempuan" },
@@ -15,10 +16,22 @@ const FormAddWarga = () => {
     { key: "menikah", value: "menikah", label: "Menikah" },
   ];
 
+  const HeaderAction = () => {
+    return (
+      <>
+        <CustomButton
+          variant={"text"}
+          label={<Close />}
+          onClick={() => setIsAddPeoples(false)}
+        />
+      </>
+    );
+  };
+
   const Content = () => {
     return (
       <>
-        <div style={{padding: '0px 20px 20px 20px'}}>
+        <div>
           <Grid2 container spacing={2} display={"flex"}>
             <Grid2 size={12}>
               <Input
@@ -95,7 +108,7 @@ const FormAddWarga = () => {
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            marginTop={"30px"}
+            marginTop={"50px"}
             gap={"10px"}
           >
             <Grid2 size={6}>
@@ -116,6 +129,7 @@ const FormAddWarga = () => {
       <CustomCard
         header={true}
         headerTitle={"Form Tambah Warga"}
+        headerAction={<HeaderAction />}
         content={<Content />}
       />
     </>
