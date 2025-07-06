@@ -15,7 +15,6 @@ const ListWarga = () => {
         <Grid2
           container
           display={"flex"}
-          flex={"wrap"}
           justifyContent={"space-between"}
           alignItems={"center"}
           marginBottom={"15px"}
