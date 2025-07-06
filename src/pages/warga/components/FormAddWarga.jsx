@@ -2,6 +2,7 @@ import { Grid2 } from "@mui/material";
 import CustomCard from "../../../core/components/Card/Card";
 import Input from "../../../core/components/Input/Input";
 import RadioButton from "../../../core/components/RadioButton/RadioButton";
+import CustomButton from "../../../core/components/Button/Button";
 
 const FormAddWarga = () => {
   const genderOptions = [
@@ -17,7 +18,7 @@ const FormAddWarga = () => {
   const Content = () => {
     return (
       <>
-        <div>
+        <div style={{padding: '0px 20px 20px 20px'}}>
           <Grid2 container spacing={2} display={"flex"}>
             <Grid2 size={12}>
               <Input
@@ -86,6 +87,23 @@ const FormAddWarga = () => {
                 placeholder={"Kepala Keluarga"}
                 size={"small"}
               />
+            </Grid2>
+          </Grid2>
+
+          <Grid2
+            spacing={5}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            marginTop={"30px"}
+            gap={"10px"}
+          >
+            <Grid2 size={6}>
+              <CustomButton variant={"outlined"} label={"Cancel"} />
+            </Grid2>
+
+            <Grid2 size={6}>
+              <CustomButton variant={"contained"} label={"Save"} />
             </Grid2>
           </Grid2>
         </div>
