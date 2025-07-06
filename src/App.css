@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 0 auto;
+  padding: 2rem; */
   background-color: #e9eef4;
+  font-family: 'Outfit';
   /* text-align: center; */
 }
 
