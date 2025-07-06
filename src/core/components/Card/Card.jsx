@@ -8,6 +8,8 @@ const CustomCard = ({
   headerTitle,
   subHeader,
   headerAction,
+  styleCard,
+  styleContent
 }) => {
   return (
     <Card sx={sx}>
@@ -16,12 +18,12 @@ const CustomCard = ({
           title={headerTitle}
           subHeader={subHeader}
           action={headerAction}
-          style={{ paddingBottom: "0px" }}
+          style={styleCard}
         />
       ) : (
         <></>
       )}
-      <CardContent style={{ padding: "0px 16px" }}>{content}</CardContent>
+      <CardContent style={styleContent}>{content}</CardContent>
       <CardActions>{actions}</CardActions>
     </Card>
   );

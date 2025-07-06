@@ -6,11 +6,11 @@ import {
   AppBar,
   Grid2,
 } from "@mui/material";
-import CustomButton from "./Button";
+import CustomButton from "../Button/Button.jsx";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/material/styles";
 import { AppBar as MuiAppBar } from "@mui/material";
-import { drawerWidth } from "../constants";
+import { drawerWidth } from "../../constants";
 
 const Topbar = ({ open, handleDrawer }) => {
   return (

@@ -7,12 +7,13 @@ import {
   ListItemText,
 } from "@mui/material";
 import { useState } from "react";
-import { menus } from "../constants/menu";
+import { menus } from "../../constants/menu";
 import { useNavigate } from "react-router-dom";
+import "./Sidebar.css"
 
 const Sidebar = ({ open }) => {
   const navigate = useNavigate()
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleMenuItemClick = (index, route) => {
     setSelectedIndex(index); // Update item yang dipilih
@@ -47,6 +48,7 @@ const Sidebar = ({ open }) => {
                     backgroundColor:
                       selectedIndex === idx ? "#f6f8fb" : "#f6f8fb",
                   },
+                  color: selectedIndex === idx ? 'black' : 'grey',
                   cursor: "pointer",
                   borderRadius: "10px",
                   display: 'flex',
@@ -54,6 +56,7 @@ const Sidebar = ({ open }) => {
                   justifyContent: 'center',
                   height: '40px',
                   gap: '10px',
+                  fontFamily: 'Outfit'
                   // marginBottom: '5px'
                 }}
               >
